@@ -9,7 +9,7 @@ Dice Roller for Wear OS is a simple app that allows you to roll virtual dice on 
 
 ## Screenshots
 
-![Dice Roller for Wear OS](screenshots/app_screenshot.png)
+<img src="screenshots/app_screenshot.png" alt="Dice Roller for Wear OS" width="250"/>
 
 ## Installation
 
