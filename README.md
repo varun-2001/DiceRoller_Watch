@@ -43,6 +43,6 @@ Dice Roller for Wear OS is released under the [MIT License](LICENSE), which mean
 
 ## Feedback and Support
 
-If you have any feedback, questions, or need support, please feel free to [open an issue](https://github.com/username/dice-roller-wear-os/issues) or [contact the maintainer](mailto:example@email.com). We appreciate your feedback and will do our best to address any issues or concerns promptly.
+If you have any feedback, questions, or need support, please feel free to [open an issue](https://github.com/varun-2001/DiceRoller-Watch/issues) or [contact the maintainer](mailto:varun.suvarna1@learner.manipal.edu). We appreciate your feedback and will do our best to address any issues or concerns promptly.
 
 Enjoy rolling virtual dice on your Wear OS device with the Dice Roller app! 🎲🎲
