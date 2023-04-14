@@ -11,6 +11,9 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.size
@@ -19,12 +22,9 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.wear.compose.material.Button
-import androidx.wear.compose.material.Text
 import com.example.diceroller_watch.R
 
 
@@ -42,8 +42,10 @@ class MainActivity : ComponentActivity() {
 fun DiceRollerApp(){
     DiceWithButtonAndImage(
         modifier = Modifier
-        .fillMaxSize()
-        .wrapContentSize(Alignment.Center))
+            .background(
+                color = androidx.compose.ui.graphics.Color(232,227,202,255))
+            .fillMaxSize()
+            .wrapContentSize(Alignment.Center))
 }
 
 
@@ -70,11 +72,14 @@ fun DiceWithButtonAndImage(modifier: Modifier = Modifier) {
 
             painter = painterResource(imageResource),
             contentDescription = "1",
-            modifier = Modifier.size(150.dp)
+            modifier = Modifier
+                .size(150.dp)
+                .clickable(
+                    interactionSource = MutableInteractionSource(),
+                    indication = null) {
+                    result = (1..6).random()
+                }
         )
-        Button(onClick = { result = (1..6).random()}) {
-            Text(text = stringResource(R.string.roll))
-        }
     }
 
 }
